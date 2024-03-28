@@ -283,3 +283,30 @@ Copy code
 </body>
 </html>
 Now you'll see a little carrot icon next to each section title, which rotates when the section is expanded or collapsed.
+
+There seems to be a bug; it is taking two clicks to expand the sections
+
+ChatGPT
+Apologies for the inconvenience. It seems like the event listener is toggling the display property before the rotation of the carrot icon. To fix this, we can rearrange the order of operations in the event listener. Here's the corrected script:
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var collapsibleTitles = document.querySelectorAll('.collapsible-title');
+
+        collapsibleTitles.forEach(function(title) {
+            title.addEventListener('click', function() {
+                var content = this.nextElementSibling;
+                var carrot = this.querySelector('.carrot');
+                if (content.style.display === 'none' || content.style.display === '') {
+                    content.style.display = 'block';
+                    carrot.classList.add('expanded');
+                } else {
+                    content.style.display = 'none';
+                    carrot.classList.remove('expanded');
+                }
+            });
+        });
+    });
+</script>
+
+With this adjustment, the carrot icon's rotation will sync correctly with the expansion/collapse of the section on the first click.
