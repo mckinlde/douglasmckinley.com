@@ -1,0 +1,162 @@
+{
+  "basics": {
+    "name": "Douglas McKinley",
+    "label": "Patent Examiner, Machine Learning Engineer, Web Developer",
+    "email": "douglas.e.mckinley@gmail.com",
+    "phone": "509-628-7610",
+    "location": {
+      "city": "Seattle",
+      "region": "Washington",
+      "countryCode": "US"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "url": "https://linkedin.com/in/douglasemckinley"
+      },
+      {
+        "network": "GitHub",
+        "url": "https://github.com/mckinlde"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "USPTO",
+      "position": "Patent Examiner",
+      "startDate": "2024-04",
+      "endDate": "2025-01",
+      "summary": "Examined patent applications in AI art, including novel ML architectures, hardware acceleration, and related fields."
+    },
+    {
+      "name": "SinglePayNews LLC",
+      "position": "CTO | Fullstack Web Developer",
+      "location": "Kennewick, WA",
+      "startDate": "2023-03",
+      "endDate": "2024-02",
+      "summary": "Developed a PERN stack web application running on AWS, hired and managed junior developers and senior contractors, and handled project management, funding, and customer acquisition.",
+      "url": "https://www.singlepaynews.com"
+    },
+    {
+      "name": "Seattle Department of Transportation",
+      "position": "Data and GIS Developer",
+      "location": "Seattle, WA",
+      "startDate": "2022-11",
+      "endDate": "2023-03",
+      "summary": "Fixed and maintained the Permit Tracking System, debugging a 20,000-line Python monolith, conducting forensic data analysis, and correcting faulty records impacting projects valued in the hundreds of millions."
+    },
+    {
+      "name": "Central Washington University",
+      "position": "Senior Instructor",
+      "location": "Ellensburg, WA",
+      "startDate": "2019-09",
+      "endDate": "2022-06",
+      "summary": "Taught 9 unique undergraduate computer science courses, developed 4 novel courses in web development, programming languages, software engineering, and computer networks."
+    },
+    {
+      "name": "DealerChimp LLC",
+      "position": "CTO | Machine Learning Engineer",
+      "location": "Corvallis, OR",
+      "startDate": "2018-10",
+      "endDate": "2020-12",
+      "summary": "Automated shopping for used cars on Craigslist using supervised classification with Python, Scikit-Learn, TensorFlow, Selenium, and SQL."
+    },
+    {
+      "name": "Astronics AES",
+      "position": "Power Electronics Test Engineering Intern",
+      "location": "Redmond, WA",
+      "startDate": "2016-05",
+      "endDate": "2016-08",
+      "summary": "Automated manufacturing steps for a 3-phase 480v to 24vdc conversion unit using C++, Python, and FAA compliance test automation."
+    },
+    {
+      "name": "QMSI",
+      "position": "PLC Engineering Intern",
+      "location": "Nashville, TN",
+      "startDate": "2015-05",
+      "endDate": "2015-08",
+      "summary": "Implemented ladder logic PLCs and conducted configuration and bring-up of Fanuc 6-axis robotic arms."
+    },
+    {
+      "name": "Pacific Northwest National Lab",
+      "position": "Software Engineering Intern",
+      "location": "Richland, WA",
+      "startDate": "2014-05",
+      "endDate": "2014-08",
+      "summary": "Conducted RF tests for DoD projects, writing software in MATLAB, Simulink, C++, and Python, and designed circuit schematics using Verilog and LTSpice."
+    }
+  ],
+  "education": [
+    {
+      "institution": "Oregon State University",
+      "area": "Computer Science",
+      "studyType": "Master of Science",
+      "endDate": "2019-03"
+    },
+    {
+      "institution": "Vanderbilt University",
+      "area": "Electrical Engineering",
+      "studyType": "Bachelor of Engineering",
+      "endDate": "2017-05"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Project Premonition",
+      "description": "Winning team for SLAM algorithm in UAV; implemented waypoint navigation in quadcopter UAV with ROS."
+    },
+    {
+      "name": "Force Control with BAXTER Robotic Arm",
+      "description": "Implemented compliant manipulation using 6DOF kinematics in MATLAB and Python/ROS."
+    },
+    {
+      "name": "GizzardElectric PowerBikes",
+      "description": "Designed and built an 18650 cell array battery for an electric bike, writing firmware for BMS and motor drive control."
+    },
+    {
+      "name": "Air Quality Analysis in Eastern Washington",
+      "description": "Conducted analysis on seasonal wildfires in Washington using data from WA State Dept. of Ecology and GeoPandas."
+    }
+  ],
+  "skills": [
+    {
+      "name": "Programming",
+      "level": "Advanced",
+      "keywords": ["Python", "JavaScript", "SQL", "C++", "MATLAB"]
+    },
+    {
+      "name": "Machine Learning",
+      "level": "Intermediate",
+      "keywords": ["TensorFlow", "Scikit-learn", "Keras", "Supervised Learning"]
+    },
+    {
+      "name": "Web Development",
+      "level": "Advanced",
+      "keywords": ["PERN Stack", "AWS", "Full-Stack Development"]
+    },
+    {
+      "name": "Embedded Systems",
+      "level": "Intermediate",
+      "keywords": ["PLC Programming", "Verilog", "ROS", "Embedded Firmware"]
+    },
+    {
+      "name": "Environmental Analysis",
+      "level": "Intermediate",
+      "keywords": ["Air Quality Monitoring", "Climate Data Interpretation"]
+    }
+  ],
+  "interests": [
+    {
+      "name": "Environment",
+      "keywords": ["Climate Change", "Air Quality Analysis"]
+    },
+    {
+      "name": "Electricity",
+      "keywords": ["Renewable Energy", "Electric Vehicles"]
+    },
+    {
+      "name": "Economics",
+      "keywords": ["Market Analysis", "Economic Policy"]
+    }
+  ]
+}
