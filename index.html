@@ -71,10 +71,7 @@
     .pull { color: var(--ink); font-style: italic; font-size: 22px; line-height: 1.38; border-left: 1px solid rgba(183,163,106,0.65); padding-left: 24px; margin: 32px 0; }
 
     /* Grid layout for sections with art */
-    .section-grid { display: grid; grid-template-columns: 1fr 0.8fr; gap: 60px; }
     .section-wide { max-width: 810px; }
-    .pearl-art { width: min(400px, 38vw); justify-self: end; align-self: center; opacity: 0.82; }
-    .middle-right { display: flex; align-items: center; justify-content: flex-end; }
 
     /* Project tiles */
     .project-grid {
@@ -114,11 +111,12 @@
     }
     .collapsible-content.open { max-height: 4000px; }
     .section-body { padding-top: 28px; }
-    .section-body p { max-width: 740px; }
+    .section-body h3 { color: var(--ink); margin-top: 0; margin-bottom: 16px; font-size: 22px; }
+    .section-body p { max-width: 740px; font-size: 17px; line-height: 1.7; }
     .section-body .link {
-      display: inline-block; margin-right: 20px; margin-bottom: 10px;
+      display: inline-block; margin-right: 20px; margin-bottom: 12px;
       font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-      font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
+      font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase;
     }
 
     /* Finale */
@@ -129,9 +127,6 @@
 
     @media (max-width: 850px) {
       .hero { gap: 20px; padding: 40px 0 30px; }
-      .section-grid { grid-template-columns: 1fr; }
-      .middle-right { order: -1; justify-content: center; }
-      .pearl-art { width: min(430px, 85vw); justify-self: center; }
       .project-grid { grid-template-columns: 1fr; }
     }
   </style>
@@ -282,24 +277,17 @@
 
     <!-- Environment -->
     <section class="section">
-      <div class="section-grid">
-        <div>
-          <div class="section-number">02</div>
-          <button class="collapsible-button">Environment <span class="carrot"></span></button>
-          <div class="collapsible-content">
-            <div class="section-body">
-              <h3 style="color:var(--ink); margin-top:0;">Yes, 'wildfire szn' is a new thing</h3>
-              <a class="link" href="https://youtu.be/5VymVVzCwMI">Youtube</a>
-              <a class="link" href="https://github.com/mckinlde/AQI">Github</a>
-              <p>In Eastern WA, among other parts of the world, a pattern of seasonal fires emerged around 2013. These fires are large enough to significantly impact the air quality of the region, which is in turn measured and tracked by various government organizations.</p>
-              <p>I wanted to prove to myself that it's actually a new thing, and not just a rose-colored memory of the past, so I contacted the WA State Dept. of Ecology for their air quality data, which they provided as a csv of daily values for each county in WA dating back to 1970. I used geopandas to make a script that would graph the data for each day following their heatmap convention, and then collected each graph into a video.</p>
-              <div class="pull">By watching a sped up version of the video, I was able to convince myself that 'wildfire szn' is in fact a new thing in my lifetime.</div>
-              <p>Some more googling can find papers that use sedimentary carbon to conclude that similar wildfire patterns emerged in the area during the 14th and 17th centuries. It could be interesting to do a statistical analysis of how the yearly average air quality has changed over time, but at this point I think most of the serious people agree on the causes and effects of climate change.</p>
-            </div>
-          </div>
-        </div>
-        <div class="middle-right">
-          <img class="pearl-art" src="assets/pearl.png" alt="Decorative illustration" />
+      <div class="section-number">02</div>
+      <button class="collapsible-button">Environment <span class="carrot"></span></button>
+      <div class="collapsible-content">
+        <div class="section-body">
+          <h3>Yes, 'wildfire szn' is a new thing</h3>
+          <a class="link" href="https://youtu.be/5VymVVzCwMI">Youtube</a>
+          <a class="link" href="https://github.com/mckinlde/AQI">Github</a>
+          <p>In Eastern WA, among other parts of the world, a pattern of seasonal fires emerged around 2013. These fires are large enough to significantly impact the air quality of the region, which is in turn measured and tracked by various government organizations.</p>
+          <p>I wanted to prove to myself that it's actually a new thing, and not just a rose-colored memory of the past, so I contacted the WA State Dept. of Ecology for their air quality data, which they provided as a csv of daily values for each county in WA dating back to 1970. I used geopandas to make a script that would graph the data for each day following their heatmap convention, and then collected each graph into a video.</p>
+          <div class="pull">By watching a sped up version of the video, I was able to convince myself that 'wildfire szn' is in fact a new thing in my lifetime.</div>
+          <p>Some more googling can find papers that use sedimentary carbon to conclude that similar wildfire patterns emerged in the area during the 14th and 17th centuries. It could be interesting to do a statistical analysis of how the yearly average air quality has changed over time, but at this point I think most of the serious people agree on the causes and effects of climate change.</p>
         </div>
       </div>
     </section>
@@ -310,7 +298,7 @@
       <button class="collapsible-button">Electricity <span class="carrot"></span></button>
       <div class="collapsible-content">
         <div class="section-body section-wide">
-          <h3 style="color:var(--ink); margin-top:0;">You can just strap a battery to a bike</h3>
+          <h3>You can just strap a battery to a bike</h3>
           <a class="link" href="http://instagram.com/gizzardelectric/">Instagram</a>
           <a class="link" href="https://annex.exploratorium.edu/cycling/humanpower1.html">Exploratorium</a>
           <a class="link" href="https://en.wikipedia.org/wiki/Bicycle_performance">Wikipedia</a>
