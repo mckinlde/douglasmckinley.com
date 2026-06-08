@@ -41,22 +41,22 @@
 
     /* Hero */
     .hero {
-      position: relative; min-height: 520px; padding: 44px 0 28px;
-      border-bottom: none; overflow: hidden;
+      position: relative; min-height: 400px; padding: 44px 0 28px;
+      border-bottom: 1px solid var(--rule); overflow: hidden;
+      background: url('assets/saturn.png') center center / cover no-repeat;
+      display: flex; align-items: center; gap: 40px;
     }
-    .hero-divider {
-      display: block; width: min(880px, 84vw); margin: 20px auto 0; opacity: 0.72;
-    }
-    .hero-copy { position: relative; margin-left: auto; width: min(650px, 56vw); padding-top: 80px; z-index: 2; }
+    .hero-copy { position: relative; z-index: 2; flex: 1; }
     .kicker { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: 0.18em; color: var(--gold); font-size: 12px; text-transform: uppercase; margin-bottom: 26px; }
     .kicker a { color: var(--gold); letter-spacing: 0.18em; }
     .kicker a:hover { color: var(--ink); }
     h1 { font-size: clamp(52px, 7vw, 96px); line-height: 0.92; margin: 0 0 24px; font-weight: 400; letter-spacing: -0.055em; }
     .dek { font-style: italic; color: var(--muted); max-width: 560px; font-size: 20px; margin-bottom: 30px; }
     .profile-pic {
-      position: absolute; top: 10px; left: -42px; width: 520px; max-width: 50vw;
-      height: auto; object-fit: cover; border-radius: 50%;
-      border: 2px solid var(--gold); opacity: 0.85; z-index: 1;
+      position: relative; z-index: 2;
+      width: clamp(120px, 25vw, 320px); height: clamp(120px, 25vw, 320px);
+      object-fit: cover; border-radius: 50%;
+      border: 2px solid var(--gold); opacity: 0.9; flex-shrink: 0;
     }
 
     /* Sections */
@@ -127,9 +127,9 @@
     @media (max-width: 850px) {
       header { align-items: flex-start; gap: 22px; flex-direction: column; }
       nav { flex-wrap: wrap; gap: 18px; }
-      .hero { min-height: auto; }
-      .profile-pic { position: relative; left: -22px; width: 100%; max-width: 100%; margin-bottom: 28px; border-radius: 50%; height: auto; }
-      .hero-copy { width: 100%; padding-top: 0; }
+      .hero { min-height: auto; flex-direction: column; gap: 20px; }
+      .profile-pic { width: clamp(100px, 40vw, 200px); height: clamp(100px, 40vw, 200px); }
+      .hero-copy { width: 100%; }
       .section-grid { grid-template-columns: 1fr; }
       .middle-right { order: -1; justify-content: center; }
       .pearl-art { width: min(430px, 85vw); justify-self: center; }
@@ -157,7 +157,6 @@
         <div class="dek">Builder, teacher, engineer. Interested in the systems that shape how we move, power, and sustain life.</div>
       </div>
     </section>
-    <img class="hero-divider" src="assets/saturn.png" alt="Saturn section divider" />
 
     <!-- Work Samples -->
     <section class="section">
