@@ -40,15 +40,24 @@
     nav a:hover { color: var(--ink); }
 
     /* Hero */
-    .hero { position: relative; min-height: 520px; padding: 44px 0 28px; border-bottom: 1px solid var(--rule); overflow: hidden; }
-    .saturn-art { position: absolute; top: 10px; left: -42px; width: 520px; max-width: 50vw; opacity: 0.72; }
+    .hero {
+      position: relative; min-height: 520px; padding: 44px 0 28px;
+      border-bottom: 1px solid var(--rule); overflow: hidden;
+      background: url('assets/saturn.png') center center / cover no-repeat;
+    }
+    .hero::after {
+      content: ""; position: absolute; inset: 0;
+      background: linear-gradient(90deg, transparent 30%, var(--bg) 75%);
+      pointer-events: none;
+    }
     .hero-copy { position: relative; margin-left: auto; width: min(650px, 56vw); padding-top: 80px; z-index: 2; }
     .kicker { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: 0.18em; color: var(--gold); font-size: 12px; text-transform: uppercase; margin-bottom: 26px; }
     h1 { font-size: clamp(52px, 7vw, 96px); line-height: 0.92; margin: 0 0 24px; font-weight: 400; letter-spacing: -0.055em; }
     .dek { font-style: italic; color: var(--muted); max-width: 560px; font-size: 20px; margin-bottom: 30px; }
     .profile-pic {
-      width: 120px; height: 120px; object-fit: cover; border-radius: 50%;
-      border: 2px solid var(--gold); margin-bottom: 20px;
+      position: absolute; top: 10px; left: -42px; width: 520px; max-width: 50vw;
+      height: auto; object-fit: cover; border-radius: 50%;
+      border: 2px solid var(--gold); opacity: 0.85; z-index: 1;
     }
 
     /* Sections */
@@ -120,7 +129,7 @@
       header { align-items: flex-start; gap: 22px; flex-direction: column; }
       nav { flex-wrap: wrap; gap: 18px; }
       .hero { min-height: auto; }
-      .saturn-art { position: relative; left: -22px; width: 100%; max-width: 100%; margin-bottom: 28px; }
+      .profile-pic { position: relative; left: -22px; width: 100%; max-width: 100%; margin-bottom: 28px; border-radius: 50%; height: auto; }
       .hero-copy { width: 100%; padding-top: 0; }
       .section-grid { grid-template-columns: 1fr; }
       .middle-right { order: -1; justify-content: center; }
@@ -137,17 +146,16 @@
         <a href="mailto:douglas.e.mckinley@gmail.com">Email</a>
         <a href="http://www.linkedin.com/in/douglasemckinley/">LinkedIn</a>
         <a href="https://github.com/mckinlde">GitHub</a>
-        <a href="https://calendar.app.google/tgQhzLMuU5A6wpCs6">Google Meet</a>
+        <a href="https://www.calendly.com/dougla/conversation">Calendly</a>
       </nav>
     </header>
 
     <section class="hero">
-      <img class="saturn-art" src="assets/saturn.png" alt="Decorative Saturn illustration" />
+      <img src="linkedin_profile.jpg" alt="Douglas McKinley" class="profile-pic" />
       <div class="hero-copy">
-        <img src="assets/linkedin_profile.jpg" alt="Douglas McKinley" class="profile-pic" />
-        <!-- <div class="kicker">Environment · Electricity · Economics</div> -->
+        <div class="kicker">Environment · Electricity · Economics</div>
         <h1>Hi, I'm Douglas</h1>
-        <!-- <div class="dek">Builder, teacher, engineer. Interested in the systems that shape how we move, power, and sustain life.</div> -->
+        <div class="dek">Builder, teacher, engineer. Interested in the systems that shape how we move, power, and sustain life.</div>
       </div>
     </section>
 
