@@ -30,14 +30,18 @@
 
     /* Header - Saturn ASCII banner */
     header {
-      display: block; padding: 16px 0 12px; border-bottom: 1px solid var(--rule);
-      overflow: hidden;
+      display: block; padding: 16px 0 12px;
+      border-bottom: 1px solid var(--rule); overflow: hidden;
+      position: relative;
     }
     .ascii-banner {
       font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-      font-size: clamp(6px, 1vw, 12px); line-height: 1.1;
+      font-size: 7px; line-height: 1.15;
       color: var(--muted); opacity: 0.7; margin: 0;
-      white-space: pre; overflow: hidden;
+      white-space: pre;
+      width: max-content;
+      position: relative;
+      left: 50%; transform: translateX(-50%);
     }
 
     /* Hero */
@@ -136,25 +140,52 @@
 <body>
   <main class="page">
     <header>
-<pre class="ascii-banner" aria-label="ASCII art of Saturn">                  .   . ...,.,.:.,.,.:.,....  ...
-          ....:.,.,.:,:,,,,:,;,:,:,:,:.::,:,:,:,:,:,:,:,,...
-     ..,,.:.,.:.:.:;;:;;;;;;;i;i;i;i:;;i;ii;;::::,:,:,::,.:..:.,...,
-   ,.,.,,,,.:,;:;:ii;:;:::,,,,.. ,.,:i;;;;;::,:,:,:::,:,:.:,,:,,..   ,,:.,...
- ..,.,,,,,::;:;:;::::,. .        ::;;;i;;;i,:,:,:,:.:,:,:,,..:..       ..:.,,,,.
-.                                                                                , ,,: .;;;;;;;::,,            :::;;:i;i;;;;::;,:,:,:.:,:.,..,...        .:i;::,
-:.:.,..                                                                         .,.,,: ;::;:i:;::            .:1:;:;;i;ii;;;;;;:::;,:.:,,.,.,:,.           ,::;i
-;;;,,,,.,...                                                                     ,  ,: ,;:i;;::::            ;;1:;:i:i:;;;i;;:;:;:;::,:.:...,,..               .
-,,;:;::,:.,:.,.                                                                   ., ,,.,,::;;;:;.          ,;;i;;;;,;:;i;;;;;i:;:;,:.:,,.,,.,..
-      ..,,..,,,,.                                                                  ..,.,,.::;;;:;::.         ;;i;iii;:,;;:;:;;;:;:;,:,:,:... .
-               . ..                                                                   .:,.,,,,::;;;;,.       :i;:i;i;i;;:::,,,:,:,:.:..., .
-        ..,.:.:.:,;;i;:,,.    ,;;;;::;:ii:;::,:.:,, .
-            ..,,:,,,,:;;;;::,,.,,;;:,:.:,,,,,,,.,,,.: .
-                . ,.:,,,:::;;i;;::;;::.:..,.,..   .     .
-         .            .,,:,,,:,;:;;;;;:i;::,,,,.
-                            ...:,:,:,:::::;,;:;::::.,.,....
-                                  ...,.,:,,,:,:,::::i:i;;;i;;;::,,.
-                                             .,...,.:.:.:,:.,:,:,,,:.:.,..
-</pre>
+<pre class="ascii-banner" aria-label="ASCII art of Saturn">                                                     ^&#x27;^^ ^.i! ;;:.;:&#x27;:; :;&#x27;,;,.;!.ii.^^  ;&#x27; ^                                                                                                                               
+                                      ; `!&quot;^`   I&quot;I!.I!,^&lt;&lt;.-+^&lt;_&gt;;[&lt;I[]`[?,?_i^_&lt;,?]&#x27;+~^&gt;&gt;I`!,^!I` ^&#x27;&#x27;:&quot;^!` ;&#x27;                                                                                                              
+                             ^,l,&#x27; !.I!&#x27;l-li~~&quot;~&lt;`+]^+]l;??&#x27;??,+-&gt;&quot;?&gt;,-_`?_:~?&gt;&quot;?!:?_.?-^&lt;-+&#x27;-&gt;;?~&#x27;+[,&gt;-~&quot;[I&quot;!!.I!&#x27;l `.;I^;^                                                                                                 
+                      ^&#x27;!`&#x27;l!I.-~,^I.;-^+-l`&gt;+ ?_^_I I&lt;I,l;&#x27;]_,+]l:_l,_+`ll^+_;I_&lt;,~- +~`&gt;_&gt;&quot;]+`-? -?`&lt;?&gt;,&gt;!i--l~-Ii&gt;;:]+l;&gt;l.I&#x27;I :.^&#x27;                                                                                       
+                   ` !!`-+ ^&lt;i`?+^~&lt;&quot;l]&#x27;:~!:ll.??;,[:l]&lt;&lt;_i&gt;i-l;1?~1++]?;]+&gt;&lt;]&lt;l]I~]+;[_~+}-~(-~?-&gt;?&gt;,_)?i]+[+&gt;-i~~?/&lt;l}i&gt;)!&#x27;+~`+++I+I.! &#x27;.; ^;                                                                              
+             ^^^I^~i&quot;I&lt;.i^,&lt;?!l&lt;_`&lt;_`!I`&gt;_Ii+&gt;ii?+]1&lt;]r}-[{[[1)-r}+j}|)}[{11?t{&gt;t{}{1[){)?/}+(?1{[~)[&lt;i(&lt;l?!~}?!~-&#x27;i~iI}&gt;i&lt;~&#x27;+~^~1,,&gt;i^+l,;+;,^  i` ;:.                                                                      
+          &quot;,!&#x27;!1&gt;`iI&#x27;:],-&gt;^&lt;ii&#x27;-&lt;.++&lt;[_il)]|}]?}1\]t-?\+|)}[-_1-|]~\?[1}+1}[?\?&lt;}+]+}]{1]?n[+x)\?[I]-~&lt;]&lt;I]~;&gt;&gt;;i?I~]&gt;l]i+?&gt;i:?`&gt;_!;`&quot;:&lt;~;+l`:~`.I~,+!^&gt; &#x27;.!^^                                                               
+       .i!^_I&quot;II;&quot;`[,&gt;[.;;.,`II{[I&gt;&gt;-!?++r[{)][{}|[)_-|[+]?&lt;&lt;&gt;-&gt;{i^]:!?-;}]i-~i:[i?1~_}{~i|?+\?-{&lt;l?&gt;_:-il~l,}_~il[&gt;1&lt;i1~[+-&gt;Ii^&gt;-&gt;;-::&gt;_^-I `&gt;^.ii^^~:I+&quot;&gt;_,^! &#x27;,^ ^                                                        
+      I&#x27;-;,ll&#x27;^!&lt;;i[.&gt;:`:&gt;I&gt;&gt;l+?++]]1_\-[t[){}i{_-&gt;]!&gt;~&lt;&lt;}-^+~I&lt;+i;!; :: II.I~-I1~)]1}ri~]1]&lt;\]l?_l~~;:]&lt;l{!I[&gt;!:+]i]&gt;l-i+~-:&lt;~.&gt;++^_i;&gt;-:l~.;;I&quot;;` ;  `~&#x27;I]&gt;:?&gt;!-&lt;.I `&quot;&gt;`                                                   
+     ;~^l:^;!,&lt;&gt;&gt;:+:`&gt;il`+i?(~i?]]1-]]f-&gt;t~1{&gt;li~~!?,&gt;}! &gt;: Il&quot;I&quot;   `     ::;i&lt;Ir~||}}-})[){&gt;r?,?&gt;i??I:~il~~I[-I~?!&gt;[+&gt;?&gt;&lt;--:&lt;&gt;^&lt;]!:^i;&lt;&gt;,&gt;?`:;&quot;^&#x27;`      ^,li:?;&#x27;?-&quot;+~:&lt;?,&quot;i`.^                                              
+   !.?!``l,I~:l{&gt;II^&quot;`+~~(_:[]}&lt;-+(1_[)~i?!-&gt;}I}+&gt;.l.I:`                 ii&gt;!]}I|}_1[}[[?(~\&gt;t]`--!+&gt;:+{&gt;I~!:-il&gt;!;+~!I?-&lt;--`&lt;+,&gt;[,`;iI&gt;i,&gt;~,;;` ^` ^       :&quot;II:i_^II`~]&gt;:+!^&lt;&gt;  ;^^                                        
+  !!!i.&quot;ll,i_`[+&quot;^l}+}}?-/+~t][[1&gt;}_+&lt;}!l1~&gt;~&gt;.I,`^          &#x27;         iI-?]&gt;|?]t-}(r{[})][)&lt;t}?+_+&lt;_&lt;,-l;]&gt;I+]`~~;;?&lt;:[&lt;`&lt;_`~_&quot;~^&quot;&quot;~,;i_;&gt;&quot;^^;&#x27; ^`          &#x27;:Ii&lt;-!I&gt;&#x27;~II,?~,_?&quot;&gt;-^I!`.^                                    
+ `?&gt;`:,^l~`&lt;_.I; .)_&lt;{[_?(_i)]{(}&lt;-__i1&gt;_~&gt;&quot;`      ^  ^              .&lt;1~?~}-}}i|]1t}_]]1[n?!|[(l_+]_+&lt;[&lt;;]&gt;&quot;]~!~_^~~&gt;^_;l-],+-&#x27;&gt;_&quot;&quot;~:I~-`!&quot;^^;&#x27; &#x27;`            `^:}]+}_]+&gt;Ii&gt;,~;,++^&lt;-;;~I` ^                                
+ ^+&quot;,:i::-:&lt;&lt;`I &quot;[?}!{-][|[l\]}1-++~}i]&quot;-`                          l&lt;}?!?--_}~l?-()?{){)-t}?)[|}_&#x27;-?}+]i^~&lt;&quot;+-&#x27;i?+I&lt;&gt;.~!&quot;?-:+_.;Il:ii:&lt;!&#x27;:&quot;  ;&quot;^&#x27;                Ii?]([\]{?&lt;,]&gt;,~!&#x27;I]!&quot;_+&quot;_~`I`&quot;^                           
+&#x27;&gt;]&quot;`^i&quot;+?&quot;i-  ;~]?[]?])1|++t?)?~-&gt;~_&gt;i&#x27;I                          ;?+t}&gt;~-_-t}-|[|{/](|r[/]?{{|{1_[-&gt;?{-i)i&gt;!?I+&gt;l~~I:~!:]_&quot;_I.;~&gt;&quot;?!&#x27;+~`~I.^;&#x27; ^`                &quot;,+~]}]((?[}?-;~iI?!&#x27;!i^+?&quot;~&lt;^l!:.                        
+.;]&quot;`^i&quot;_-&quot;~-  1]??[--}}?}+[t~[+~_[~liI                          I;[\)[?;}~!-j}&gt;|&lt;t?1?1?\in+_\i(-}}(1[-}I!(_+)&gt;-i~I&gt;1l:~lI]-&#x27;&gt;~Il:!,?l&quot;!~,]I.^;&#x27; ^:.                 -li]-)&lt;-\(1/~[}-}:iI&quot;`i?.i_`_I!Ii  ;                    
+.:?&quot;,:i^^?&quot;~]  I?-?[+~})]}+?)~~+~-+?`I               ^           +~/t|t]:[?&gt;+);!)j){}?]|t\1?+ti1l]-}-]&gt;\-~~&lt;^}}i~l[:&lt;?`+i&#x27;-?^&lt;&lt;,~1&#x27;`llI?~&quot;]I.^;&quot;^^                    ,I];!+&gt;{{{[}]([f}-]iIi-l,: ii!;&gt;l!i!&quot;,                 
+.^+,l^;^^?&#x27;-{ ^&gt;+!{[?+[([}~[\&lt;-+l?+&gt;^;                          ]~+/t\}}li~&lt;~)[[[){)&gt;&gt;({?+}-Ix[+[[_i[?l)-l]-&quot;[~?+&lt;}i]_,&lt;i.~-&quot;+-.&gt;^&quot;&quot;:l;!~,];^I;^                       `;&quot;^::&quot;I_&lt;&lt;][l/_1)_}l-,i+`&lt;!&gt;,?&gt;.l~:_!&#x27;,              
+  i,ll,::+&gt;i-.  l?1_~{1?}}~lf[?+&gt;?+-;I               `          1}-j(1}{l1?&lt;~(]+)+|(\++[-[t}+|+-|}[-~[^1-`1?+}_-i~_i~i`[~ +[,+_`_^I:l&gt;,-I:&gt;!`.^                                l&#x27;I,&gt;:[[-?+[}}~?]~li~;&gt;&gt;&quot;&gt;~&#x27;!I`?&gt;:.           
+  ^i.i,&quot;:&quot;._~`l^;i?-,+-{]\_!t?+&lt;--&gt;~I_;                       `I(?!f)1}|~(-1i?+&gt;(&lt;?&gt;{&lt;]|++|[&lt;1]}|(?|)-~&lt;~&gt;]l&gt;?-&gt;!_~?&lt;&gt;&quot;_!;__&quot;_&gt;`:&gt;l&quot;?&lt;^i&quot;^^:&quot;,;,.^                                   ;;&#x27;i:!-~];]?~}[_+~I;~,--^!l&gt;Ii!         
+   ;&quot;-:&quot;;:^;_:i_&#x27;^?_`}_}&gt;(_+)])l!-_l~~                        &quot;+ni&gt;|)(\}?}1}-?&lt;i[~_}?&lt;)&gt;)|\~:1-1&lt;(-1)[)/-!1-}]~-:?,i1l:~!:_?`&gt;l`;!l&quot;~+,&gt;~&#x27;!^  ;^  `                                         &#x27;.:,,:&gt;&gt;I]&gt;I`i&#x27;+[,]:&lt;&#x27;I&lt;^!^      
+     ^&quot;`?;.`I.-+l;:lI+[i~{&gt;{(][[[l_-?&gt;!^&quot;                     &quot;+/+_/}\|}~}~&gt;[1+i[&gt;&lt;-}_?(|_f{(/{}[]+&lt;}flr_it--+}]+]+l+i^-l:{_`&lt;~,?~li!;&#x27;~-^&gt;!`^                                                    &quot;;^I::^&quot; I&lt;;!i_;~,`-I&#x27;,    
+      &quot;^~?,,^.;?i.;+^i&gt;]_]++f}}-}&lt;&lt;&gt;]~~&quot;I_`                   `&gt;n?+)}([1?}})]t(i1&lt;&lt;]!I+}-[]--?~-{~+?-~&gt;(+&gt;\}~)?]--!&gt;[&lt;i|~:+&lt;,~_^:&gt;!&#x27;~,;i,.`                                                             &quot;^  ^ :lI^+,&#x27;I:`_&gt;   
+        ^&lt;,~_`:I!l?-. I+?]~-\])]-~[}]+{i&lt;_,&#x27;^                 &#x27;&quot;/++1[(1{_}11[t??j)-I-!]-~i(?~f})I[?1}-_/i&lt;+&gt;:-?!~_&gt;+!l li:~_`_&lt;&quot;:,i^&quot;                                                                           ` ^.&quot;:;^!_`l^
+           I&gt;,]-l.!].+; I)&gt;+]-[}}](-??{!l1!,~  &#x27;                ~{+(?(&lt;1_[{?|}(&gt;|1&lt;1?~Il-!]i,1&lt;&gt;--l-?-_(l!]i&lt;&lt;+I+[&quot;+&gt;_;~&quot;^ll;&lt;i&quot;,&gt;` ^:&quot;,^ `                                                                              :`: 
+            `&#x27;!__l:&lt; I_^_?llil&lt;+-{&lt;}1]\_~{&gt;+~;,i`&#x27;.             &lt;?[t?~[--)11+/}}|{\\{i[_{&gt;]-;]&lt;l?&lt;._~,~}_I{~,]+&lt;!~Il_llI,,i!l!I.:]:.&quot;   ^                                                                                    
+               ^I^~[`^&lt;&#x27;&quot;_ Il&gt;:+__i_)&gt;r-}\-|+&lt;&lt;&lt;:,;`^&quot;          :_&gt;u|/+?~}{\?|[&gt;/1/)1+I}(&gt;|-,+_^~~`?~&quot;,!,`I:`&gt;+,i+:i];.^&gt;i&lt;&lt;`:&quot;.^                                                                                            
+                ` I&lt; ~[&quot;`!;i?i &lt;}:+&gt;}l}+It}\1}!1+?,i^&lt;!`         I,)[\/{+i1)-/i^f?1{]~?&lt;|]{?&gt;\+&gt;~_&quot;l+^&gt;;::i_,+l&quot;&gt;^.:[, I`    `                                                                                               
+                   &quot; I&lt;.`1`~i.;]-.I_i^?I+)-_{1[[}]i/,l-I&quot;I,^:      {-?-?[-}}&gt;?&gt;I}?_+][1?|)|1^(--+!:++l&gt;?&lt;:1I:_~ :&quot;^I&#x27;`    ^                                                                                                  
+                      ^.`_ I1l,:; ~i,~?:&gt;?&lt;-?-+{}(-/_&quot;)-&lt;~l;+!`,;  ;-![?+{]1~)&lt;I|_&gt;{[!|-~~)&lt;l]l!~-;+-`~&gt;!,__!-,&quot;,i:,&gt;` &gt;&quot;^^                                                                                                  
+                          `II~:_+^{;^~+&quot;&gt;:i!:+l{]}]t?-f[1l__?+l+I:^:l`~-l+{[])-:~&lt; ~~ ~];~[+:?&gt;i_-,~~II?&gt;`?;.I&gt;;;~&quot;-+`.;` ^^                                                                                                 
+                             &quot;`^&lt;^i_:&lt;?`+_!:+i`&gt;-~]|+Ij[(}{}1_+~(~&gt;~;^&lt;-;_{~&lt;}~!1;i?~ _~&quot;I!,,:!`~!:~!^;&gt;i`_I:?-I+I:&lt;&gt;;.    :^I                                                                                               
+                                 .:I.:;&#x27;&gt;?Il-}&quot;&lt;_&#x27;:~;&gt;[&gt;+}}})11[/]+{~l1_,+&gt;i?[~l|l&lt;&lt;+ _~&#x27;`;;,il:_-&quot;!&#x27;,;i::lI`I!^I^     ^    ^&gt;                                                                                               
+                     ^;^^           .^`.;I;.-_.?_:~~^+:l:I?![}1Ij[-(-?1}?l?)-/?i]_&#x27;]~&quot;i-&#x27;&gt;`I^]~ i~.&gt;!`.^        `           &#x27;I                                                                                               
+                    &#x27;&gt;!.                 &quot;.&#x27;I~`+I`~?^~__I+_ ,I&lt;![+&lt;|}|{]+}[|]}}_)-~]i&quot;][:+&gt;l`_I^i; ;&#x27; ^ `                                                                                                                    
+                   ^&quot;&gt;                        &#x27;,^.!?^l[!;-_^__;&lt;?,,(+}+-l1-]?(]-/(1|1_}]-+]-l]-+?_&#x27;lI,&quot;-^^^                                                                                                                  
+                   ^ `                             ; `^II-&gt;.]?^&lt;]i&quot;_+^-[:}-I+?&lt;&gt;|]~){)1{|}t[-(-+l&lt;&lt;]_!l[!&#x27;II` ,:, ..                                                                                                         
+                                                         ;&#x27;.^&lt;Ii&gt;,`?+&quot;??&#x27;~-^~[iI}+!?}~+}_?}?-)?!]_?{[--[i,~&lt;Il~!&gt;&gt;`&lt;i: II`! &#x27;.; `^                                                                                           
+                                                              .:``.ii&#x27;+&gt;&#x27;{-;+_l:]+^_+Ii-!~}~!)+!-[-~++?)-i(_-)&gt;+~-,l+&gt;&quot;+&lt;I~&gt;ll?i!i&quot;`;,^;^                                                                                    
+                                                                    `&#x27;ll&#x27;^&lt;!-~:,?+`?+&#x27;++^+?!;?,;}+&quot;]+&quot;+[+i~+)?[_,]{~t?~f[|1-\+-\_|]&gt;{!&lt;?i&gt;lI&#x27;I!                                                                              
+                                                                           &#x27;I:`.I!,&gt;+&#x27;&gt;;^~-&gt;`_i,+?&#x27;__:!1,,li?-?li?_1{&gt;i)-/[-)i]}[f}_f}}{]{_[!+i-l&lt;i&#x27; ^                                                                       
+                                                                                   &quot;l&#x27;`^.;li&#x27;?&lt;&quot;&gt;I -?&quot;+_i&quot;_&gt;^?_^~+&quot;+1;:li?}_I&gt;-i]|&lt;l[!?}{i_?__(+&gt;?i!_!&quot;,I ^;                                                                 
+                                                                                           ` ;&quot;&quot;l^ I+`&gt;]!:&gt;I&#x27;?_`+?^&lt;_i&quot;_&gt;^+?^+-`+?!,?&gt;;[~;?&gt;:i!,,!;:l_ll_,?&gt;&quot;;i&quot;I::.                                                         
+                                                                                                      `;&quot;``,^^I`:+.&gt;]i&quot;_l&quot;I_:_-^&lt;-&gt;:_&gt;^++^&lt;+^&lt;_i&quot;_i,++^+?,+}&gt;^+&gt;,_!&#x27;I &#x27;,^&#x27;                                                   
+                                                                                                                  .^;:^:I::&quot; ^I&#x27;ll!&quot;Ii`??`~~,~_l&quot;&gt;l^&lt;&gt;`!I&#x27;:l,`l,^!l^::,I&quot;^&quot;l&quot;^                                               
+                                                                                                                                    &quot;^.l,^I,&quot;,:&#x27;``I,ll,I:::::::,:::^`^.^:,^;                                                 </pre>
     </header>
 
     <section class="hero">
