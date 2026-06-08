@@ -35,27 +35,26 @@
     }
     .ascii-banner {
       font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-      font-size: clamp(3px, 0.55vw, 7px); line-height: 1.2;
+      font-size: clamp(4px, 0.6vw, 7px); line-height: 1.15;
       color: var(--muted); opacity: 0.7; margin: 0;
       white-space: pre; overflow: hidden;
-      text-align: center; max-height: 220px;
     }
 
     /* Hero */
     .hero {
-      position: relative; min-height: 400px; padding: 44px 0 28px;
+      position: relative; padding: 60px 0 40px;
       border-bottom: 1px solid var(--rule); overflow: hidden;
-      display: flex; align-items: center; gap: 40px;
+      display: flex; align-items: center; justify-content: center; gap: 40px;
     }
-    .hero-copy { position: relative; z-index: 2; flex: 1; }
+    .hero-copy { position: relative; z-index: 2; }
     .kicker { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: 0.18em; color: var(--gold); font-size: 12px; text-transform: uppercase; margin-bottom: 26px; }
     .kicker a { color: var(--gold); letter-spacing: 0.18em; }
     .kicker a:hover { color: var(--ink); }
     h1 { font-size: clamp(52px, 7vw, 96px); line-height: 0.92; margin: 0 0 24px; font-weight: 400; letter-spacing: -0.055em; }
-    .dek { font-style: italic; color: var(--muted); max-width: 560px; font-size: 20px; margin-bottom: 30px; }
+    .dek { font-style: italic; color: var(--muted); max-width: 560px; font-size: 20px; margin-bottom: 0; }
     .profile-pic {
       position: relative; z-index: 2;
-      width: clamp(120px, 25vw, 320px); height: clamp(120px, 25vw, 320px);
+      width: clamp(120px, 20vw, 280px); height: clamp(120px, 20vw, 280px);
       object-fit: cover; border-radius: 50%;
       border: 2px solid var(--gold); opacity: 0.9; flex-shrink: 0;
     }
@@ -126,8 +125,7 @@
     footer { padding: 46px 0 60px; text-align: center; color: var(--faint); font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; }
 
     @media (max-width: 850px) {
-      .hero { min-height: auto; gap: 20px; }
-      .hero-copy { width: auto; }
+      .hero { gap: 20px; padding: 40px 0 30px; }
       .section-grid { grid-template-columns: 1fr; }
       .middle-right { order: -1; justify-content: center; }
       .pearl-art { width: min(430px, 85vw); justify-self: center; }
