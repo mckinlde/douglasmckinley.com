@@ -42,13 +42,11 @@
     /* Hero */
     .hero {
       position: relative; min-height: 520px; padding: 44px 0 28px;
-      border-bottom: 1px solid var(--rule); overflow: hidden;
-      background: url('assets/saturn.png') center center / cover no-repeat;
+      border-bottom: none; overflow: hidden;
     }
-    .hero::after {
-      content: ""; position: absolute; inset: 0;
-      background: linear-gradient(90deg, transparent 30%, var(--bg) 75%);
-      pointer-events: none;
+    .hero-divider {
+      display: block; width: min(880px, 84vw); margin: 0 auto; opacity: 0.6;
+      border-bottom: 1px solid var(--rule); padding-bottom: 0;
     }
     .hero-copy { position: relative; margin-left: auto; width: min(650px, 56vw); padding-top: 80px; z-index: 2; }
     .kicker { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: 0.18em; color: var(--gold); font-size: 12px; text-transform: uppercase; margin-bottom: 26px; }
@@ -158,6 +156,7 @@
         <div class="dek">Builder, teacher, engineer. Interested in the systems that shape how we move, power, and sustain life.</div>
       </div>
     </section>
+    <img class="hero-divider" src="assets/saturn.png" alt="Saturn section divider" />
 
     <!-- Work Samples -->
     <section class="section">
