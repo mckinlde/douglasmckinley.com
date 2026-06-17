@@ -89,31 +89,32 @@
     .project-links { font-size: 14px; }
     .project-links a { margin-right: 14px; }
 
-    /* Collapsible */
-    .collapsible-button {
-      background: none; border: none; font-size: clamp(28px, 3.5vw, 48px);
-      font-weight: 400; color: var(--ink); display: flex; align-items: center;
-      justify-content: space-between; cursor: pointer; width: 100%; padding: 0;
-      font-family: Georgia, 'Times New Roman', serif; letter-spacing: -0.04em;
-      line-height: 0.98; text-align: left;
-    }
-    .carrot {
-      display: inline-block; width: 14px; height: 14px;
-      border-top: 2px solid var(--gold); border-right: 2px solid var(--gold);
-      transform: rotate(135deg); transition: transform 0.3s ease; margin-left: 16px; flex-shrink: 0;
-    }
-    .expanded .carrot { transform: rotate(-45deg); }
-    .collapsible-content {
-      max-height: 0; overflow: hidden; transition: max-height 0.5s ease;
-    }
-    .collapsible-content.open { max-height: 4000px; }
-    .section-body { padding-top: 28px; }
+    /* Section body styling */
+    .section-body { padding-top: 18px; }
     .section-body h3 { color: var(--ink); margin-top: 0; margin-bottom: 16px; font-size: 22px; }
     .section-body p { max-width: 740px; font-size: 17px; line-height: 1.7; }
     .section-body .link {
       display: inline-block; margin-right: 20px; margin-bottom: 12px;
       font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
       font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase;
+    }
+    .sample-list {
+      list-style: none; padding: 0; margin: 0;
+      display: flex; flex-direction: column; gap: 12px;
+    }
+    .sample-list li {
+      display: flex; flex-wrap: wrap; gap: 8px;
+      align-items: baseline;
+      font-size: 17px;
+      line-height: 1.6;
+    }
+    .sample-list a {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--ink);
+    }
+    .sample-list span {
+      color: var(--muted);
     }
 
     /* Finale */
@@ -146,134 +147,67 @@
     <!-- Work Samples -->
     <section class="section">
       <div class="section-number">01</div>
-      <button class="collapsible-button">Work Samples <span class="carrot"></span></button>
-      <div class="collapsible-content">
-        <div class="section-body">
-          <div class="project-grid">
-            <div class="project-tile">
-              <div class="project-title">DocketBot</div>
-              <p>A Windows desktop app that automates secretarial tasks for a public defender's office.</p>
-              <div class="project-links"><a href="https://github.com/mckinlde/DocketBot">GitHub</a></div>
-            </div>
-            <div class="project-tile">
-              <div class="project-title">Local LLMs</div>
-              <p>Run large language models locally with CPU + RAM, no GPU required.</p>
-              <div class="project-links"><a href="https://github.com/mckinlde/local_llms">GitHub</a></div>
-            </div>
-            <div class="project-tile">
-              <div class="project-title">CarSaleSignal</div>
-              <p>A MLS for the automotive sector, built by scraping Craigslist at web scale without DDOSing it.</p>
-              <div class="project-links"><a href="https://www.carsalesignal.com">Website</a></div>
-            </div>
-            <div class="project-tile">
-              <div class="project-title">Student Evaluations</div>
-              <p>I taught at Central Washington University for 3 years, and was really great at it.</p>
-              <div class="project-links"><a href="https://drive.google.com/file/d/1zb9vbd4TYhYxqA_o_aZVg7-nIWmW0eLQ/view?usp=sharing">Teaching Reference</a></div>
-            </div>
-            <div class="project-tile">
-              <div class="project-title">Legal Writing Sample</div>
-              <p>I worked as a USPTO Patent Examiner in Art Unit 2121, Artificial Intelligence.</p>
-              <div class="project-links"><a href="https://drive.google.com/file/d/1JXe8W2zgxMzi0L8UW_U8aM0TUliMgaLr/view?usp=sharing">Final Rejection</a></div>
-            </div>
-            <div class="project-tile">
-              <div class="project-title">Personal Statement</div>
-              <p>My philosophy on teaching and mentorship, submitted during my academic job search.</p>
-              <div class="project-links"><a href="https://drive.google.com/file/d/1fSy_2hQfSd5gBktouMDaSTKV8JPFCoyv/view?usp=sharing">Read Statement</a></div>
-            </div>
-            <div class="project-tile">
-              <div class="project-title">B.Eng. Electrical Engineering</div>
-              <p>Undergraduate transcript documenting core electrical and computer engineering coursework.</p>
-              <div class="project-links"><a href="https://drive.google.com/file/d/1ZYtgK5Ose2oJSBvhyqwsSq8GjEBwCoHp/view?usp=sharing">View Transcript</a></div>
-            </div>
-            <div class="project-tile">
-              <div class="project-title">M.S. Computer Science</div>
-              <p>Graduate transcript covering topics including machine learning, databases, and networks.</p>
-              <div class="project-links"><a href="https://drive.google.com/file/d/10HhfDQaIOyQt_2IGRNlsOkzcAUGl9S0C/view?usp=sharing">View Transcript</a></div>
-            </div>
-            <div class="project-tile">
-              <div class="project-title">Resume</div>
-              <p>A concise, printable overview of my skills, work history, and academic background.</p>
-              <div class="project-links"><a href="https://docs.google.com/document/d/1WSH8MMPK5dqrThFJ6fEpHAWtta1N60NMMQjTyCjDBQ4/edit?usp=sharing">View GoogleDoc</a></div>
-            </div>
-            <div class="project-tile">
-              <div class="project-title">References</div>
-              <p>Professional and academic references available on request, or via this document.</p>
-              <div class="project-links"><a href="https://drive.google.com/file/d/1p90p1v6XA54JCmt8a8PbKblxOEPeK0_-/view?usp=sharing">View Document</a></div>
-            </div>
-            <div class="project-tile">
-              <div class="project-title">Is it worth the time</div>
-              <p>An interactive implementation of the <a href="https://xkcd.com/1205/">XKCD Comic</a>.</p>
-              <div class="project-links">
-                <a href="https://c.albert-thompson.com/xkcd/">Albert Thompson's version</a>
-                <a href="https://isitworththetime.com/">Is it worth the Money?</a>
-              </div>
-            </div>
-            <div class="project-tile">
-              <div class="project-title">Spike Driver</div>
-              <p>A scripted dev-loop for writing selenium webdriver scripts; <a href="https://en.wikipedia.org/wiki/Spike_driver">Automating Automation</a>.</p>
-              <div class="project-links"><a href="https://en.wikipedia.org/wiki/Spike_driver">Concept</a></div>
-            </div>
-            <div class="project-tile">
-              <div class="project-title">Crossposter</div>
-              <p>Propagate social media posts across platforms; or eBay/FBM/CL.</p>
-              <div class="project-links">
-                <a href="https://www.zoho.com/social/lp/social-media-publishing.html">Zoho</a>
-                <a href="https://buffer.com/free-trial/free-social-scheduler">Buffer</a>
-                <a href="https://www.vendoo.co/">Vendoo</a>
-              </div>
-            </div>
-          </div>
-        </div>
+      <h2>Work Samples</h2>
+      <div class="section-body">
+        <ul class="sample-list">
+          <li><a href="https://github.com/mckinlde/DocketBot">DocketBot</a><span>— A Windows desktop app that automates secretarial tasks for a public defender's office.</span></li>
+          <li><a href="https://github.com/mckinlde/local_llms">Local LLMs</a><span>— Run large language models locally with CPU + RAM, no GPU required.</span></li>
+          <li><a href="https://www.carsalesignal.com">CarSaleSignal</a><span>— An MLS for the automotive sector, built by scraping Craigslist at web scale without DDOSing it.</span></li>
+          <li><a href="https://drive.google.com/file/d/1zb9vbd4TYhYxqA_o_aZVg7-nIWmW0eLQ/view?usp=sharing">Student Evaluations</a><span>— Teaching reference from my time at Central Washington University.</span></li>
+          <li><a href="https://drive.google.com/file/d/1JXe8W2zgxMzi0L8UW_U8aM0TUliMgaLr/view?usp=sharing">Legal Writing Sample</a><span>— A sample from my work as a USPTO Patent Examiner in AI.</span></li>
+          <li><a href="https://drive.google.com/file/d/1fSy_2hQfSd5gBktouMDaSTKV8JPFCoyv/view?usp=sharing">Personal Statement</a><span>— My philosophy on teaching and mentorship during my academic job search.</span></li>
+          <li><a href="https://drive.google.com/file/d/1ZYtgK5Ose2oJSBvhyqwsSq8GjEBwCoHp/view?usp=sharing">B.Eng. Electrical Engineering</a><span>— Undergraduate transcript and coursework record.</span></li>
+          <li><a href="https://drive.google.com/file/d/10HhfDQaIOyQt_2IGRNlsOkzcAUGl9S0C/view?usp=sharing">M.S. Computer Science</a><span>— Graduate transcript covering ML, databases, and networks.</span></li>
+          <li><a href="https://docs.google.com/document/d/1WSH8MMPK5dqrThFJ6fEpHAWtta1N60NMMQjTyCjDBQ4/edit?usp=sharing">Resume</a><span>— Concise overview of my skills, work history, and academic background.</span></li>
+          <li><a href="https://drive.google.com/file/d/1p90p1v6XA54JCmt8a8PbKblxOEPeK0_-/view?usp=sharing">References</a><span>— Professional and academic references available on request.</span></li>
+          <li><a href="https://isitworththetime.com/">Is it worth the time</a><span>— Interactive implementation of the XKCD idea.</span></li>
+          <li><a href="https://en.wikipedia.org/wiki/Spike_driver">Spike Driver</a><span>— A scripted dev-loop for writing Selenium WebDriver scripts.</span></li>
+          <li><a href="https://www.vendoo.co/">Crossposter</a><span>— Tools for propagating posts across social and marketplace platforms.</span></li>
+        </ul>
       </div>
     </section>
 
     <!-- Environment -->
     <section class="section">
       <div class="section-number">02</div>
-      <button class="collapsible-button">Environment <span class="carrot"></span></button>
-      <div class="collapsible-content">
-        <div class="section-body">
-          <h3>Yes, 'wildfire szn' is a new thing</h3>
-          <a class="link" href="https://youtu.be/5VymVVzCwMI">Youtube</a>
-          <a class="link" href="https://github.com/mckinlde/AQI">Github</a>
-          <p>In Eastern WA, among other parts of the world, a pattern of seasonal fires emerged around 2013. These fires are large enough to significantly impact the air quality of the region, which is in turn measured and tracked by various government organizations.</p>
-          <p>I wanted to prove to myself that it's actually a new thing, and not just a rose-colored memory of the past, so I contacted the WA State Dept. of Ecology for their air quality data, which they provided as a csv of daily values for each county in WA dating back to 1970. I used geopandas to make a script that would graph the data for each day following their heatmap convention, and then collected each graph into a video.</p>
-          <div class="pull">By watching a sped up version of the video, I was able to convince myself that 'wildfire szn' is in fact a new thing in my lifetime.</div>
-          <p>Some more googling can find papers that use sedimentary carbon to conclude that similar wildfire patterns emerged in the area during the 14th and 17th centuries. It could be interesting to do a statistical analysis of how the yearly average air quality has changed over time, but at this point I think most of the serious people agree on the causes and effects of climate change.</p>
-        </div>
+      <h2>Environment</h2>
+      <div class="section-body">
+        <h3>Yes, 'wildfire szn' is a new thing</h3>
+        <a class="link" href="https://youtu.be/5VymVVzCwMI">Youtube</a>
+        <a class="link" href="https://github.com/mckinlde/AQI">Github</a>
+        <p>In Eastern WA, among other parts of the world, a pattern of seasonal fires emerged around 2013. These fires are large enough to significantly impact the air quality of the region, which is in turn measured and tracked by various government organizations.</p>
+        <p>I wanted to prove to myself that it's actually a new thing, and not just a rose-colored memory of the past, so I contacted the WA State Dept. of Ecology for their air quality data, which they provided as a csv of daily values for each county in WA dating back to 1970. I used geopandas to make a script that would graph the data for each day following their heatmap convention, and then collected each graph into a video.</p>
+        <div class="pull">By watching a sped up version of the video, I was able to convince myself that 'wildfire szn' is in fact a new thing in my lifetime.</div>
+        <p>Some more googling can find papers that use sedimentary carbon to conclude that similar wildfire patterns emerged in the area during the 14th and 17th centuries. It could be interesting to do a statistical analysis of how the yearly average air quality has changed over time, but at this point I think most of the serious people agree on the causes and effects of climate change.</p>
       </div>
     </section>
 
     <!-- Electricity -->
     <section class="section">
       <div class="section-number">03</div>
-      <button class="collapsible-button">Electricity <span class="carrot"></span></button>
-      <div class="collapsible-content">
-        <div class="section-body section-wide">
-          <h3>You can just strap a battery to a bike</h3>
-          <a class="link" href="http://instagram.com/gizzardelectric/">Instagram</a>
-          <a class="link" href="https://annex.exploratorium.edu/cycling/humanpower1.html">Exploratorium</a>
-          <a class="link" href="https://en.wikipedia.org/wiki/Bicycle_performance">Wikipedia</a>
-          <p>Since the industrial revolution, human activities have raised atmospheric CO2 by ~50%. At the same time, life expectancy has increased by ~100%.</p>
-          <a class="link" href="https://climate.nasa.gov/vital-signs/carbon-dioxide/">NASA</a>
-          <a class="link" href="https://en.wikipedia.org/wiki/Life_expectancy">Life Expectancy</a>
-          <p>There's a valid point to be made that a Tesla car may run on coal as much as it runs on solar, and my takeaway is that the battery should be thought of as a transmission more than an engine. The most interesting company leveraging this that I'm aware of is:</p>
-          <a class="link" href="https://edisonmotors.ca">Edison Motors</a>
-        </div>
+      <h2>Electricity</h2>
+      <div class="section-body section-wide">
+        <h3>You can just strap a battery to a bike</h3>
+        <a class="link" href="http://instagram.com/gizzardelectric/">Instagram</a>
+        <a class="link" href="https://annex.exploratorium.edu/cycling/humanpower1.html">Exploratorium</a>
+        <a class="link" href="https://en.wikipedia.org/wiki/Bicycle_performance">Wikipedia</a>
+        <p>Since the industrial revolution, human activities have raised atmospheric CO2 by ~50%. At the same time, life expectancy has increased by ~100%.</p>
+        <a class="link" href="https://climate.nasa.gov/vital-signs/carbon-dioxide/">NASA</a>
+        <a class="link" href="https://en.wikipedia.org/wiki/Life_expectancy">Life Expectancy</a>
+        <p>There's a valid point to be made that a Tesla car may run on coal as much as it runs on solar, and my takeaway is that the battery should be thought of as a transmission more than an engine. The most interesting company leveraging this that I'm aware of is:</p>
+        <a class="link" href="https://edisonmotors.ca">Edison Motors</a>
       </div>
     </section>
 
     <!-- Economics -->
     <section class="section">
       <div class="section-number">04</div>
-      <button class="collapsible-button">Economics <span class="carrot"></span></button>
-      <div class="collapsible-content">
-        <div class="section-body section-wide">
-          <a class="link" href="https://www.carsalesignal.com">CarSaleSignal</a>
-          <p>A supervised classifier can predict which cars will sell in 24hrs, but it can't stop depreciation. As a frequently bad driver who is also frequently broke, shopping for a used car on craigslist is an experience I know all too well. So well that I was able to formalize and automate the process, which I then tried to sell as a service for used car dealerships.</p>
-          <p>Conversations with those users revealed to me that most inventory is sourced from repossession auctions and trade-ins, both cases of an owner abandoning a vehicle. Even when the best "get it off my lawn" deals on craigslist are found, they're simply not competitive.</p>
-          <div class="pull">I think it's interesting how much of our transportation is centered around "assets" that behave more like liabilities.</div>
-        </div>
+      <h2>Economics</h2>
+      <div class="section-body section-wide">
+        <a class="link" href="https://www.carsalesignal.com">CarSaleSignal</a>
+        <p>A supervised classifier can predict which cars will sell in 24hrs, but it can't stop depreciation. As a frequently bad driver who is also frequently broke, shopping for a used car on craigslist is an experience I know all too well. So well that I was able to formalize and automate the process, which I then tried to sell as a service for used car dealerships.</p>
+        <p>Conversations with those users revealed to me that most inventory is sourced from repossession auctions and trade-ins, both cases of an owner abandoning a vehicle. Even when the best "get it off my lawn" deals on craigslist are found, they're simply not competitive.</p>
+        <div class="pull">I think it's interesting how much of our transportation is centered around "assets" that behave more like liabilities.</div>
       </div>
     </section>
 
@@ -287,16 +221,6 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      // Collapsible sections
-      const buttons = document.querySelectorAll(".collapsible-button");
-      buttons.forEach((button) => {
-        button.addEventListener("click", () => {
-          const content = button.nextElementSibling;
-          content.classList.toggle("open");
-          button.classList.toggle("expanded");
-        });
-      });
-
       // Dynamic ASCII art generation
       const ASCII_RAMP = " .'`^\",:;Il!i><~+_-?][}{1)(|\\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$";
       const CHAR_ASPECT = 1.8; // monospace chars are ~1.8x taller than wide
