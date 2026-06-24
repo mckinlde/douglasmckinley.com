@@ -98,6 +98,66 @@
       font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
       font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase;
     }
+    .video-embed {
+      margin: 24px 0 12px;
+      border: 1px solid var(--rule);
+      border-radius: 8px;
+      overflow: hidden;
+      background: rgba(255,255,255,0.02);
+      aspect-ratio: 16 / 9;
+      max-width: 760px;
+    }
+    .video-embed iframe {
+      display: block; width: 100%; height: 100%; border: 0;
+    }
+    .instagram-carousel {
+      margin: 24px 0 12px;
+      max-width: 760px;
+    }
+    .carousel-shell {
+      border: 1px solid var(--rule);
+      border-radius: 8px;
+      overflow: hidden;
+      background: rgba(255,255,255,0.02);
+    }
+    .carousel-track {
+      display: flex;
+      transition: transform 0.35s ease;
+    }
+    .carousel-slide {
+      min-width: 100%;
+      padding: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .carousel-slide .instagram-media {
+      width: 100% !important;
+      max-width: 100% !important;
+      min-width: 0 !important;
+      margin: 0 !important;
+    }
+    .carousel-controls {
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+      margin-top: 12px;
+    }
+    .carousel-btn {
+      border: 1px solid var(--rule);
+      background: rgba(255,255,255,0.03);
+      color: var(--ink);
+      border-radius: 999px;
+      width: 36px;
+      height: 36px;
+      cursor: pointer;
+      font-size: 16px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+    .carousel-btn:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
     .sample-list {
       list-style: none; padding: 0; margin: 0;
       display: flex; flex-direction: column; gap: 12px;
@@ -172,8 +232,15 @@
       <h2>Environment</h2>
       <div class="section-body">
         <h3>Yes, 'wildfire szn' is a new thing</h3>
-        <a class="link" href="https://youtu.be/5VymVVzCwMI">Youtube</a>
         <a class="link" href="https://github.com/mckinlde/AQI">Github</a>
+        <div class="video-embed">
+          <iframe
+            id="wildfire-video"
+            src="https://www.youtube.com/embed/5VymVVzCwMI?start=1276&enablejsapi=1"
+            title="Wildfire season video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
         <p>In Eastern WA, among other parts of the world, a pattern of seasonal fires emerged around 2013. These fires are large enough to significantly impact the air quality of the region, which is in turn measured and tracked by various government organizations.</p>
         <p>I wanted to prove to myself that it's actually a new thing, and not just a rose-colored memory of the past, so I contacted the WA State Dept. of Ecology for their air quality data, which they provided as a csv of daily values for each county in WA dating back to 1970. I used geopandas to make a script that would graph the data for each day following their heatmap convention, and then collected each graph into a video.</p>
         <div class="pull">By watching a sped up version of the video, I was able to convince myself that 'wildfire szn' is in fact a new thing in my lifetime.</div>
@@ -187,6 +254,22 @@
       <h2>Electricity</h2>
       <div class="section-body section-wide">
         <h3>You can just strap a battery to a bike</h3>
+        <div class="instagram-carousel" aria-label="Instagram posts carousel">
+          <div class="carousel-shell">
+            <div class="carousel-track" id="instagram-track">
+              <div class="carousel-slide"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/B4IZDKkltqW/" data-instgrm-version="14"></blockquote></div>
+              <div class="carousel-slide"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/B4IaKKzlSu9/" data-instgrm-version="14"></blockquote></div>
+              <div class="carousel-slide"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/B4IZp6Zln7D/" data-instgrm-version="14"></blockquote></div>
+              <div class="carousel-slide"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/B4IY_Nylk85/" data-instgrm-version="14"></blockquote></div>
+              <div class="carousel-slide"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/B4IYOOxlIJ9/" data-instgrm-version="14"></blockquote></div>
+              <div class="carousel-slide"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/B4IVTb2lDoj/" data-instgrm-version="14"></blockquote></div>
+            </div>
+          </div>
+          <div class="carousel-controls">
+            <button class="carousel-btn" type="button" data-direction="-1" aria-label="Previous post">←</button>
+            <button class="carousel-btn" type="button" data-direction="1" aria-label="Next post">→</button>
+          </div>
+        </div>
         <a class="link" href="http://instagram.com/gizzardelectric/">Instagram</a>
         <a class="link" href="https://annex.exploratorium.edu/cycling/humanpower1.html">Exploratorium</a>
         <a class="link" href="https://en.wikipedia.org/wiki/Bicycle_performance">Wikipedia</a>
@@ -218,8 +301,43 @@
     <footer>Douglas McKinley · douglasmckinley.com</footer>
   </main>
 
+  <script async defer src="https://www.instagram.com/embed.js"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
+      let wildfirePlayer;
+      let instagramIndex = 0;
+      const instagramTrack = document.getElementById("instagram-track");
+      const instagramButtons = document.querySelectorAll(".carousel-btn");
+
+      function updateInstagramCarousel() {
+        if (!instagramTrack) return;
+        instagramTrack.style.transform = `translateX(-${instagramIndex * 100}%)`;
+      }
+
+      instagramButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const direction = parseInt(button.getAttribute("data-direction"), 10);
+          instagramIndex = (instagramIndex + direction + 6) % 6;
+          updateInstagramCarousel();
+        });
+      });
+
+      if (window.instgrm) {
+        window.instgrm.Embeds.process();
+      }
+
+      window.onYouTubeIframeAPIReady = function () {
+        wildfirePlayer = new YT.Player("wildfire-video", {
+          events: {
+            onReady: function (event) {
+              event.target.seekTo(1276, true);
+              event.target.setPlaybackRate(2);
+            }
+          }
+        });
+      };
+
       // Dynamic ASCII art generation
       const ASCII_RAMP = " .'`^\",:;Il!i><~+_-?][}{1)(|\\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$";
       const CHAR_ASPECT = 1.8; // monospace chars are ~1.8x taller than wide
