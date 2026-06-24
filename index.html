@@ -141,7 +141,17 @@
       display: flex;
       justify-content: flex-end;
       gap: 8px;
-      margin-top: 12px;
+      margin: 12px 0 0;
+    }
+    .carousel-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .carousel-header .carousel-controls {
+      margin: 0;
     }
     .carousel-btn {
       border: 1px solid var(--rule);
@@ -253,8 +263,14 @@
       <div class="section-number">03</div>
       <h2>Electricity</h2>
       <div class="section-body section-wide">
-        <h3>You can just strap a battery to a bike</h3>
         <div class="instagram-carousel" aria-label="Instagram posts carousel">
+          <div class="carousel-header">
+            <h3>You can just strap a battery to a bike</h3>
+            <div class="carousel-controls">
+              <button class="carousel-btn" type="button" data-direction="-1" aria-label="Previous post">←</button>
+              <button class="carousel-btn" type="button" data-direction="1" aria-label="Next post">→</button>
+            </div>
+          </div>
           <div class="carousel-shell">
             <div class="carousel-track" id="instagram-track">
               <div class="carousel-slide"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/B4IZDKkltqW/" data-instgrm-version="14"></blockquote></div>
