@@ -246,7 +246,7 @@
         <div class="video-embed">
           <iframe
             id="wildfire-video"
-            src="https://www.youtube-nocookie.com/embed/5VymVVzCwMI?start=1276&enablejsapi=1"
+            src="https://www.youtube.com/embed/5VymVVzCwMI?start=1276"
             title="Wildfire season video"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen></iframe>
@@ -318,10 +318,8 @@
   </main>
 
   <script async defer src="https://www.instagram.com/embed.js"></script>
-  <script src="https://www.youtube.com/iframe_api"></script>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      let wildfirePlayer;
       let instagramIndex = 0;
       const instagramTrack = document.getElementById("instagram-track");
       const instagramButtons = document.querySelectorAll(".carousel-btn");
@@ -342,17 +340,6 @@
       if (window.instgrm) {
         window.instgrm.Embeds.process();
       }
-
-      window.onYouTubeIframeAPIReady = function () {
-        wildfirePlayer = new YT.Player("wildfire-video", {
-          events: {
-            onReady: function (event) {
-              event.target.seekTo(1276, true);
-              event.target.setPlaybackRate(2);
-            }
-          }
-        });
-      };
 
       // Dynamic ASCII art generation
       const ASCII_RAMP = " .'`^\",:;Il!i><~+_-?][}{1)(|\\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$";
